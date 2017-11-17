@@ -6,14 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
 Food.destroy_all
+User.destroy_all
 
 12.times do
-  Food.create(
+  Food.create!(
     name: Faker::Food.dish,
     description: Faker::Food.ingredient,
     price: Faker::Commerce.price,
     photo: 'http://www.consejosgratis.es/wp-content/uploads/2013/12/los-mejores-restaurants-de-comida-rapida-en-peru.jpg'
   )
 end
+
+User.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

@@ -2,25 +2,23 @@
 
 <h1>Foods</h1>
 
-
 <div class="card-columns">
   <% @foods.each do |food| %>
-    <div class="card bg-light border-light mb-3 text-center">
-      <%= image_tag food.photo %>
-      <div class="card-body">
-        <h4 class="card-img-top"><%= food.name%></h4>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item"><%= food.description %></li>
-          <li class="list-group-item text-muted">$<%= food.price %></li>
-        </ul>
-        <%= link_to 'Show',  food, class:'btn btn-warning' %>
-        <%= link_to 'Edit', edit_food_path(food), class:'btn btn-warning' %>
-        <%= link_to 'Destroy', food, class:'btn btn-warning', method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div>
+  <div class="card bg-light border-light mb-3 text-center">
+    <%= image_tag food.photo.thumb %>
+    <div class="card-body">
+      <h4 class="card-img-top"><%= food.name %></h4>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><%= food.description %></li>
+        <li class="list-group-item">$<%= food.price %></li>
+      </ul>
+      <%= link_to 'Show', food, class:'btn btn-warning' %>
+      <%= link_to 'Edit', edit_food_path(food), class:'btn btn-warning' %>
+      <%= link_to 'Destroy', food, class:'btn btn-warning', method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
+  </div>
   <% end %>
 </div>
-
 
 <br>
 

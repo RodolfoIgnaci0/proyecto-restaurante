@@ -19,6 +19,10 @@
   <strong>Price:</strong>
 </p>
 
+<p>
+  <strong>Photo:</strong>
+  <%= image_tag @food.photo.thumb %>
+</p>
 
 <%= link_to 'Edit', edit_food_path(@food) %> |
 <%= link_to 'Back', foods_path %>

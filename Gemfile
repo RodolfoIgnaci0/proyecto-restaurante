@@ -7,7 +7,13 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'fog-aws'
+gem 'carrierwave'
 gem 'rails', '~> 5.1.4'
+gem 'activeadmin'
+gem 'cancancan'
+gem 'draper'
+gem 'pundit'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
@@ -18,6 +24,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'devise'
 gem 'faker'
+gem 'mini_magick'
+
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
